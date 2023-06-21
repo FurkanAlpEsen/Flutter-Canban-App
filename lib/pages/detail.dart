@@ -1,6 +1,7 @@
-import 'package:task_managment_app/models/task_model.dart';
+import 'package:Canban/models/task_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:Canban/services/notify_service.dart';
 
 import '../blocs/task/tasks_bloc.dart';
 import '../blocs/theme/theme_bloc.dart';
@@ -68,22 +69,34 @@ class DetailPage extends StatelessWidget {
                           ? Colors.white
                           : Colors.black),
                 ),
+                // notificationButton(context),
                 _stateButtons(context),
               ],
             ),
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.settings),
-          onPressed: () {
-            _setTheme(context);
-          }),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: SizedBox(
+        height: 35,
+        width: 35,
+        child: FloatingActionButton(        
+            child: const Icon(Icons.settings),
+            onPressed: () {
+              _setTheme(context);
+            }),
+      ),
     );
   }
 
   void _setTheme(BuildContext context) async {
     context.read<ThemeBloc>().add(ChangeThemeEvent());
+  }
+
+  Widget notificationButton(BuildContext context){
+    return ElevatedButton(onPressed: (){
+      NotificationService().showNotification(title: 'Your Canban Reminder', body: 'Come in your table!');
+    }, child: Text('Set Reminder'));
   }
 
   //! burda sorun var tasklarin state i sadece anasayfadan yenilenirse degisiyo
@@ -94,14 +107,15 @@ class DetailPage extends StatelessWidget {
       },
       builder: (context, state) {
         return Container(
-          height: 70,
-          width: 150,
+          height: 60,
+          width: 290,
           decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(15)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              notificationButton(context),
               IconButton(
                   color: Colors.amber,
                   highlightColor: Colors.amber,

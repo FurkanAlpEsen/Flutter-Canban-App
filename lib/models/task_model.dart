@@ -4,34 +4,39 @@ class Task {
   String title;
   String description;
   Status taskStatus;
+  bool isFavorite;
 
   Task({
     required this.title,
     required this.description,
     required this.taskStatus,
+    required this.isFavorite,
   });
 
   Task copyWith({
     String? title,
     String? description,
     Status? taskStatus,
+    bool? isFavorite,
   }) {
     return Task(
       title: title ?? this.title,
       description: description ?? this.description,
       taskStatus: taskStatus ?? this.taskStatus,
+      isFavorite: isFavorite ?? this.isFavorite
     );
   }
 
   @override
   String toString() =>
-      'Task(title: $title, description: $description, taskStatus: $taskStatus)';
+      'Task(title: $title, description: $description, taskStatus: $taskStatus, favorite: $isFavorite)';
 
   Map<String, dynamic> toMap() {
     return {
       'title': title,
       'description': description,
       'taskStatus': taskStatus,
+      'isFavorite': isFavorite
     };
   }
 }

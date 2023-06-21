@@ -1,0 +1,15 @@
+{
+    "language": "Deutsch",
+    "@language": {
+        "description": "Die aktuelle Sprache"
+    },
+    "helloWorld": "Hallo Welt!",
+    "@helloWorld": {
+        "description": "Ein Gruß des Programmierers"
+    },
+    "mainPageTitle": "Alle Aufgaben",
+    "todoPageTitle": "Todo Aufgaben",
+    "inprogressPageTitle": "Prüfungsaufgaben",
+    "donePageTitle": "Erledigte Aufgaben",
+    "initialTaskName": "Beispiel"
+}

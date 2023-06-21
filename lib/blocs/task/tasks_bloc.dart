@@ -11,6 +11,7 @@ class TasksBloc extends Bloc<TasksEvent, TasksState> {
     on<EditItemEvent>(_onEditItem);
     on<EditItemStatusEvent>(_onEditItemStatus);
     on<DeleteItemEvent>(_onDeleteItem);
+    on<FavoriteItemEvent>(_onFavoriteItem);
   }
 
   void _onAddItem(AddItemEvent event, Emitter<TasksState> emit) {
@@ -35,6 +36,15 @@ class TasksBloc extends Bloc<TasksEvent, TasksState> {
     final task = state.allItems.elementAt(event.index);
 
     task.taskStatus = event.status;
+
+    emit(TasksState(allItems: state.allItems));
+  }
+
+  void _onFavoriteItem(FavoriteItemEvent event, Emitter<TasksState> emit) {
+    final state = this.state;
+    final task = state.allItems.elementAt(event.index);
+
+    task.isFavorite = event.isFavorite;
 
     emit(TasksState(allItems: state.allItems));
   }

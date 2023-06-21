@@ -45,6 +45,19 @@ class EditItemStatusEvent extends TasksEvent {
   List<Object> get props => [index, status];
 }
 
+class FavoriteItemEvent extends TasksEvent {
+  final int index;
+  final bool isFavorite;
+
+  const FavoriteItemEvent({
+    required this.index,
+    required this.isFavorite,
+  });
+
+  @override
+  List<Object> get props => [index, isFavorite];
+}
+
 class DeleteItemEvent extends TasksEvent {
   final int index;
 

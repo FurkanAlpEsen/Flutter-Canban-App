@@ -1,4 +1,4 @@
-name: task_managment_app
+name: Canban
 description: We can use this app for little management app.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -46,6 +46,10 @@ dependencies:
   path_provider: ^2.0.14
   hive_flutter: ^1.1.0
   flutter_native_splash: ^2.2.19
+  flutter_local_notifications: ^14.1.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
   
 dev_dependencies:
   flutter_test:
@@ -85,6 +89,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  generate: true
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

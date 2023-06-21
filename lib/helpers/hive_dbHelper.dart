@@ -1,4 +1,4 @@
-import 'package:task_managment_app/models/task_model.dart';
+import 'package:Canban/models/task_model.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';

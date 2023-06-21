@@ -10,7 +10,7 @@ class TasksState extends Equatable {
 
   factory TasksState.initial() {
     return TasksState(allItems: [
-      Task(title: 'Example', description: 'Do homework!', taskStatus: Status.todo)
+      Task(title: 'Example', description: 'Do homework!', taskStatus: Status.todo, isFavorite: false)
     ]);
   }
 

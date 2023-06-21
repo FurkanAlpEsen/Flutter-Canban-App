@@ -1,8 +1,10 @@
+import 'package:Canban/blocs/language/language_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../blocs/task/tasks_bloc.dart';
 import '../../models/task_model.dart';
 import 'item_list.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TasksPage extends StatelessWidget {
   TasksPage({super.key, this.index = 0});
@@ -20,14 +22,14 @@ class TasksPage extends StatelessWidget {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return Scaffold(
-                  backgroundColor: const Color.fromARGB(255, 136, 167, 69),
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                   body: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const SizedBox(
                         height: 65,
                       ),
-                      _getPageTitle(),
+                      _getPageTitle(context),
                       const SizedBox(
                         height: 15,
                       ),
@@ -63,31 +65,91 @@ class TasksPage extends StatelessWidget {
   }
 
   //! Switch-case yapisi icin genel mixin yaz...
-  Widget _getPageTitle() {
-    String pageTitle = 'All Tasks';
+  Widget _getPageTitle(BuildContext context) {
+    // String pageTitle = 'All Tasks';
+    String pageTitle = AppLocalizations.of(context)!.mainPageTitle;
 
     switch (index) {
       case 1:
-        pageTitle = 'Todo Tasks';
+        pageTitle = AppLocalizations.of(context)!.todoPageTitle;
         break;
       case 2:
-        pageTitle = 'In Progress Tasks';
+        pageTitle = AppLocalizations.of(context)!.inprogressPageTitle;
         break;
       case 3:
-        pageTitle = 'Done Tasks';
+        pageTitle = AppLocalizations.of(context)!.donePageTitle;
         break;
       default:
     }
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: const Color(0xFFebe7c0),
-        borderRadius: BorderRadius.circular(18),
-      ),
-      child: Text(
-        pageTitle,
-        style: const TextStyle(fontSize: 25, color: Color(0xFF000000)),
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(14),
+          // decoration: BoxDecoration(
+          //   color: const Color(0xFFebe7c0),
+          //   borderRadius: BorderRadius.circular(18),
+          // ),
+          child: Text(
+            pageTitle,
+            style: const TextStyle(
+                fontSize: 25, color: Color.fromARGB(255, 80, 109, 115)),
+          ),
+        ),
+        IconButton(
+            onPressed: () {
+              denem(context);
+              // _dialogBuilder(context);
+            },
+            icon: Icon(
+              Icons.settings,
+              color: const Color.fromARGB(255, 79, 159, 183),
+              size: index == 0 ? 25 : 0,
+            ))
+      ],
+    );
+  }
+
+  Future<void> denem(BuildContext context) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: IntrinsicHeight(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        BlocProvider.of<LanguageBloc>(context)
+                            .add(const ChangeLanguageEvent(language: 'tr'));
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text('Türkçe')),
+                  ElevatedButton(
+                      onPressed: () {
+                        BlocProvider.of<LanguageBloc>(context)
+                            .add(const ChangeLanguageEvent(language: 'en'));
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text('English')),
+                  ElevatedButton(
+                      onPressed: () {
+                        BlocProvider.of<LanguageBloc>(context)
+                            .add(const ChangeLanguageEvent(language: 'de'));
+                        Navigator.of(context).pop();
+                        // print(BlocProvider.of<LanguageBloc>(context).state.lg);
+                      },
+                      child: const Text('Deutsch')),
+                ],
+              ),
+            ),
+          ),
+          // actions: _dialogButtons(context),
+        );
+      },
     );
   }
 
@@ -186,7 +248,8 @@ class TasksPage extends StatelessWidget {
           Task task = Task(
               title: _titleController.text,
               description: _descriptionController.text,
-              taskStatus: Status.todo);
+              taskStatus: Status.todo,
+              isFavorite: false);
           context.read<TasksBloc>().add(AddItemEvent(item: task));
           _titleController.clear();
           _descriptionController.clear();

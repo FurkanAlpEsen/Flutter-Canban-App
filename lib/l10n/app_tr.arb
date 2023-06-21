@@ -1,0 +1,16 @@
+{
+    "language": "Türkçe",
+    "@language": {
+        "description": "Seçili Dil"
+    },
+    "helloWorld": "Merhaba Dünya!",
+    "@helloWorld": {
+        "description": "Programcıdan mesaj!"
+    },
+    "mainPageTitle": "Tüm Görevler",
+    "todoPageTitle": "Yapılacak Görevler",
+    "inprogressPageTitle": "Devam Eden Görevler",
+    "donePageTitle": "Tamamlanmış Görevler",
+    "initialTaskName": "Örnek"
+
+}
