@@ -1,4 +1,4 @@
-# task_managment_app
+# Your Local Canban App
 
 Its a Flutter mobile project.
 
