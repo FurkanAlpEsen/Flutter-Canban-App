@@ -73,10 +73,5 @@ These tests did [Bloc Test](https://pub.dev/documentation/bloc_test/latest/) pac
 8- Done Page:
 ![Screenshot](./assets/screenshots/Tasks%20in%20the%20donepage.png)
 
-
-<div style="width: 60%; height: 60%">
-  
-  ![Screenshot](./assets/screenshots/Tasks%20in%20the%20donepage.png)
-  
-</div>
+<img src="./assets/screenshots/Tasks%20in%20the%20donepage.png" width="50" height="100"/>
 
