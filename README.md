@@ -6,32 +6,6 @@ Its a Flutter mobile app project.
 
 This project is a little task management application for everyone.
 
-## Screen Shots
-
-1- Main Page:
-![Screenshot](./assets/screenshots/menu.png)
-
-2- Add Task:
-![Screenshot](./assets/screenshots/add%20task.png)
-
-3- Change Your Language:
-![Screenshot](./assets/screenshots/change%20language.png)
-
-4- Task Detail Page:
-![Screenshot](./assets/screenshots/Edit%20task%20detail.png)
-
-5- Detail Page with Dark Theme (Dark Theme Applied Whole Project this just a sample):
-![Screenshot](./assets/screenshots/Detail%20page%20dark%20theme.png)
-
-6- Todo Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20todopage.png)
-
-7- InProgress Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20inprogresspage.png)
-
-8- Done Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20donepage.png)
-
 ## Splash Screen
 
 Application will be start firstly [Flutter Native Splash](https://pub.dev/documentation/flutter_native_splash/latest/)
@@ -72,3 +46,29 @@ These tests did [Bloc Test](https://pub.dev/documentation/bloc_test/latest/) pac
 - Language settings (EN/SP/TR/DE) (Checked)
 - Special code refactoring (Mixins, constants, routing etc.)
 - User testing and publish any store
+
+## Screen Shots
+
+1- Main Page:
+![Screenshot](./assets/screenshots/menu.png)
+
+2- Add Task:
+![Screenshot](./assets/screenshots/add%20task.png)
+
+3- Change Your Language:
+![Screenshot](./assets/screenshots/change%20language.png)
+
+4- Task Detail Page:
+![Screenshot](./assets/screenshots/Edit%20task%20detail.png)
+
+5- Detail Page with Dark Theme (Dark Theme Applied Whole Project this just a sample):
+![Screenshot](./assets/screenshots/Detail%20page%20dark%20theme.png)
+
+6- Todo Page:
+![Screenshot](./assets/screenshots/Tasks%20in%20the%20todopage.png)
+
+7- InProgress Page:
+![Screenshot](./assets/screenshots/Tasks%20in%20the%20inprogresspage.png)
+
+8- Done Page:
+![Screenshot](./assets/screenshots/Tasks%20in%20the%20donepage.png)
