@@ -53,48 +53,47 @@ These tests did [Bloc Test](https://pub.dev/documentation/bloc_test/latest/) pac
 
 
 <p align="left">
-    <img src="./assets/screenshots/menu.png" width="250" height="400"/>
+    <img src="./assets/screenshots/menu.png" width="250" height="500"/>
 </p>
 
 2- Add Task:
 
 <p align="left">
-    <img src="./assets/screenshots/add%20task.png" width="250" height="400"/>
+    <img src="./assets/screenshots/add%20task.png" width="250" height="500"/>
 </p>
 
 3- Change Your Language:
 
 <p align="left">
-    <img src="./assets/screenshots/change%20language.png" width="250" height="400"/>
+    <img src="./assets/screenshots/change%20language.png" width="250" height="500"/>
 </p>
 
 4- Task Detail Page:
 
 <p align="left">
-    <img src="./assets/screenshots/Edit%20task%20detail.png" width="250" height="400"/>
+    <img src="./assets/screenshots/Edit%20task%20detail.png" width="250" height="500"/>
 </p>
 
 5- Detail Page with Dark Theme (Dark Theme Applied Whole Project this just a sample):
 
 <p align="left">
-    <img src="./assets/screenshots/Detail%20page%20dark%20theme.png" width="250" height="400"/>
+    <img src="./assets/screenshots/Detail%20page%20dark%20theme.png" width="250" height="500"/>
 </p>
 
 6- Todo Page:
 
 <p align="left">
-    <img src="./assets/screenshots/Tasks%20in%20the%20todopage.png" width="250" height="400"/>
+    <img src="./assets/screenshots/Tasks%20in%20the%20todopage.png" width="250" height="500"/>
 </p>
 
 7- InProgress Page:
-![Screenshot]()
 
 <p align="left">
-    <img src="./assets/screenshots/Tasks%20in%20the%20inprogresspage.png" width="250" height="400"/>
+    <img src="./assets/screenshots/Tasks%20in%20the%20inprogresspage.png" width="250" height="500"/>
 </p>
 
 8- Done Page:
 
 <p align="left">
-  <img src="./assets/screenshots/Tasks%20in%20the%20donepage.png" width="250" height="400"/>
+  <img src="./assets/screenshots/Tasks%20in%20the%20donepage.png" width="250" height="500"/>
 </p>
