@@ -50,28 +50,26 @@ These tests did [Bloc Test](https://pub.dev/documentation/bloc_test/latest/) pac
 ## Screen Shots
 
 1- Main Page:
-![Screenshot](./assets/screenshots/menu.png){: style="float:right"}
+<img src="./assets/screenshots/menu.png" width="150" height="300"/>
 
 2- Add Task:
-![Screenshot](./assets/screenshots/add%20task.png)
+<img src="./assets/screenshots/add%20task.png" width="150" height="300"/>
 
 3- Change Your Language:
-![Screenshot](./assets/screenshots/change%20language.png)
+<img src="./assets/screenshots/change%20language.png" width="150" height="300"/>
 
 4- Task Detail Page:
-![Screenshot](./assets/screenshots/Edit%20task%20detail.png)
+<img src="./assets/screenshots/Edit%20task%20detail.png" width="150" height="300"/>
 
 5- Detail Page with Dark Theme (Dark Theme Applied Whole Project this just a sample):
-![Screenshot](./assets/screenshots/Detail%20page%20dark%20theme.png)
+<img src="./assets/screenshots/Detail%20page%20dark%20theme.png" width="150" height="300"/>
 
 6- Todo Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20todopage.png)
+<img src="./assets/screenshots/Tasks%20in%20the%20todopage.png" width="150" height="300"/>
 
 7- InProgress Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20inprogresspage.png)
+![Screenshot]()
+<img src="./assets/screenshots/Tasks%20in%20the%20inprogresspage.png" width="150" height="300"/>
 
 8- Done Page:
-![Screenshot](./assets/screenshots/Tasks%20in%20the%20donepage.png)
-
-<img src="./assets/screenshots/Tasks%20in%20the%20donepage.png" width="50" height="100"/>
-
+<img src="./assets/screenshots/Tasks%20in%20the%20donepage.png" width="150" height="300"/>
