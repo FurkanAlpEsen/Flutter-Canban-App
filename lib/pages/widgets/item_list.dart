@@ -23,13 +23,13 @@ class ItemsList extends StatelessWidget {
 
   Widget _gridViewBuilder(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(19.0),
       child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
-              childAspectRatio: 3 / 2,
-              crossAxisSpacing: 15,
-              mainAxisSpacing: 15),
+              childAspectRatio: 6 / 7,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 19),
           itemCount: items.length,
           itemBuilder: (context, index) {
             return Dismissible(
@@ -80,11 +80,11 @@ class ItemsList extends StatelessWidget {
               ),
               onDismissed: (DismissDirection direction) {
                 if (direction == DismissDirection.startToEnd) {
-                  // print("Add to favorite");
+                  print("Add to favorite");
                   // context.read<TasksBloc>().add(AddItemFavoritesEvent(index: index));
                   // context.read()<TasksBloc>().state.allItems;
                 } else {
-                  // print('Remove item');
+                  print('Remove item');
                   // context.read<TasksBloc>().add(DeleteItemEvent(index: index));
                   // context.read()<TasksBloc>().state.allItems.removeAt(index);
                 }
@@ -103,24 +103,28 @@ class ItemsList extends StatelessWidget {
                   );
                 },
                 child: Container(
+                  // height: 250,
                   decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 105, 193, 211),
+                      color: const Color.fromARGB(255, 110, 221, 244),
                       borderRadius: BorderRadius.circular(15)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        items[index].title,
-                        style: const TextStyle(
-                          color: Color(0xFF472d54),
-                          fontWeight: FontWeight.normal,
-                          fontSize: 19,
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text(
+                          items[index].title,
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.normal,
+                            fontSize: 19,
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 120),
                         child: IconButton(
-                            onPressed: () {}, icon: Icon(Icons.favorite, color: context.read<TasksBloc>().state.allItems[index].isFavorite ? Colors.purpleAccent : Colors.black ,)),
+                            onPressed: () {}, icon: Icon(Icons.favorite, color: context.read<TasksBloc>().state.allItems[index].isFavorite ? Colors.red : Colors.white)),
                       )
                     ],
                   ),

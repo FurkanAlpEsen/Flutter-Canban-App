@@ -86,10 +86,10 @@ class TasksPage extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.all(14),
-          // decoration: BoxDecoration(
-          //   color: const Color(0xFFebe7c0),
-          //   borderRadius: BorderRadius.circular(18),
-          // ),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 232, 226, 175),
+            borderRadius: BorderRadius.circular(18),
+          ),
           child: Text(
             pageTitle,
             style: const TextStyle(
@@ -98,7 +98,7 @@ class TasksPage extends StatelessWidget {
         ),
         IconButton(
             onPressed: () {
-              denem(context);
+              _hideSettingsButton(context);
               // _dialogBuilder(context);
             },
             icon: Icon(
@@ -110,7 +110,7 @@ class TasksPage extends StatelessWidget {
     );
   }
 
-  Future<void> denem(BuildContext context) {
+  Future<void> _hideSettingsButton(BuildContext context) {
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
